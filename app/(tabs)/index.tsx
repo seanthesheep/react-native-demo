@@ -1,14 +1,15 @@
 import { StyleSheet } from 'react-native';
 
-import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
+import DOLreading from '../../components/DailyReading';
 
 export default function TabOneScreen() {
+  const today = new Intl.DateTimeFormat('en', { weekday: 'long' }).formatToParts(new Date())[0].value
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab One</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
+      <DOLreading season="epiphany" week="2" day={today} />
     </View>
   );
 }
