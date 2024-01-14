@@ -7,7 +7,7 @@ export default function TabOneScreen() {
   const today = new Intl.DateTimeFormat('en', { weekday: 'long' }).formatToParts(new Date())[0].value
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
+      <Text style={styles.title}>Psalms of the Day</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <DOLreading season="epiphany" week="2" day={today} />
     </View>
